@@ -36,7 +36,7 @@ namespace DataAccessLibrary
             sql = @"select e.*
                     from dbo.EmailAddresses e
                     inner join dbo.ContactEmail ce on ce.EmailAddressId = e.Id
-                    where ce.ContractId = @id";
+                    where ce.ContactId = @id";
 
             output.EmailAddresses = db.LoadData<EmailAddressModel, dynamic>(sql, new { Id = id }, _connectionString);
 
