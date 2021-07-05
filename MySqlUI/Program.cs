@@ -4,17 +4,17 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 
-namespace SqliteUI
+namespace MySqlUI
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SqliteCrud sql = new SqliteCrud(GetConnectionString());
+            MySqlCrud sql = new MySqlCrud(GetConnectionString());
 
             ReadAllContacts(sql);
 
-            //ReadContact(sql);
+            ReadContact(sql, 1);
 
             //CreateNewContact(sql);
 
@@ -24,7 +24,6 @@ namespace SqliteUI
 
             Console.ReadLine();
         }
-
         private static void CreateNewContact(ISqlCrud sql)
         {
             FullContactModel user = new FullContactModel

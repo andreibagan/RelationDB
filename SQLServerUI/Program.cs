@@ -14,13 +14,14 @@ namespace SQLServerUI
 
             ReadAllContacts(sql);
 
-            ReadContact(sql, 1);
+            //ReadContact(sql, 1);
 
-            CreateNewContact(sql);
+            //CreateNewContact(sql);
 
-            UpdateContact(sql);
+            //UpdateContact(sql);
 
-            RemovePhoneNumberFromContact(sql, 1, 2);
+            //RemovePhoneNumberFromContact(sql, 1, 2);
+            Console.WriteLine("SQL Server");
 
             Console.ReadLine();
         }

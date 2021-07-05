@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLServerUI", "SQLServerUI\SQLServerUI.csproj", "{D0C61E3B-80F3-4A18-8575-3C6871992C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLibrary", "DataAccessLibrary\DataAccessLibrary.csproj", "{C9260378-1608-4C43-9994-A1A481067528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLibrary", "DataAccessLibrary\DataAccessLibrary.csproj", "{C9260378-1608-4C43-9994-A1A481067528}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLContactsDB", "SQLContactsDB\SQLContactsDB.sqlproj", "{52ED25E7-E994-4868-BCF1-4C782EFB4B21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteUI", "SqliteUI\SqliteUI.csproj", "{271A0DC7-6F73-42E4-8B7A-FE8C4B8E469E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySqlUI", "MySqlUI\MySqlUI.csproj", "{2575AC28-69CD-4CC7-924E-EE9E08BBD0B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteUI", "SqliteUI\SqliteUI.csproj", "{FE2CF059-25FD-42AA-80F8-26FA12813FC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +33,14 @@ Global
 		{52ED25E7-E994-4868-BCF1-4C782EFB4B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52ED25E7-E994-4868-BCF1-4C782EFB4B21}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52ED25E7-E994-4868-BCF1-4C782EFB4B21}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{271A0DC7-6F73-42E4-8B7A-FE8C4B8E469E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{271A0DC7-6F73-42E4-8B7A-FE8C4B8E469E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{271A0DC7-6F73-42E4-8B7A-FE8C4B8E469E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{271A0DC7-6F73-42E4-8B7A-FE8C4B8E469E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2575AC28-69CD-4CC7-924E-EE9E08BBD0B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2575AC28-69CD-4CC7-924E-EE9E08BBD0B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2575AC28-69CD-4CC7-924E-EE9E08BBD0B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2575AC28-69CD-4CC7-924E-EE9E08BBD0B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2CF059-25FD-42AA-80F8-26FA12813FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2CF059-25FD-42AA-80F8-26FA12813FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2CF059-25FD-42AA-80F8-26FA12813FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2CF059-25FD-42AA-80F8-26FA12813FC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
