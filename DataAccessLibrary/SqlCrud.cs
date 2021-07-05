@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DataAccessLibrary
 {
-    public class SqlCrud : ISqlCrud
+    public class SqlCrud
     {
         private readonly string _connectionString;
         private SqlDataAccess db = new SqlDataAccess();
@@ -28,7 +28,7 @@ namespace DataAccessLibrary
 
             output.Info = db.LoadData<ContactModel, dynamic>(sql, new { Id = id }, _connectionString).FirstOrDefault();
 
-            if (output.Info == null)
+            if(output.Info == null)
             {
                 return null;
             }
@@ -58,9 +58,9 @@ namespace DataAccessLibrary
             sql = "select Id from dbo.Contacts where FirstName = @Firstname and LastName = @LastName;";
             int contactId = db.LoadData<IdLookupModel, dynamic>(sql, new { FirstName = contact.Info.FirstName, LastName = contact.Info.LastName }, _connectionString).First().Id;
 
-            foreach (var phoneNumber in contact.PhoneNumbers)
+            foreach(var phoneNumber in contact.PhoneNumbers)
             {
-                if (phoneNumber.Id == 0)
+                if(phoneNumber.Id == 0)
                 {
                     sql = "insert into dbo.PhoneNumbers (PhoneNumber) values (@PhoneNumber);";
                     db.SaveData(sql, new { PhoneNumber = phoneNumber.PhoneNumber }, _connectionString);
@@ -101,7 +101,7 @@ namespace DataAccessLibrary
             sql = "delete from dbo.ContactPhoneNumbers where PhoneNumberId = @PhoneNumberId and ContactId = @ContactId;";
             db.SaveData(sql, new { phoneNumberId = phoneNumberId, ContactId = contactId }, _connectionString);
 
-            if (links.Count == 1)
+            if(links.Count == 1)
             {
                 sql = "delete from dbo.PhoneNumbers where Id = @PhoneNumberId;";
                 db.SaveData(sql, new { PhoneNumberId = phoneNumberId }, _connectionString);

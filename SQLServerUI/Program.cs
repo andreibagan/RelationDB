@@ -25,7 +25,7 @@ namespace SQLServerUI
             Console.ReadLine();
         }
 
-        private static void CreateNewContact(ISqlCrud sql)
+        private static void CreateNewContact(SqlCrud sql)
         {
             FullContactModel user = new FullContactModel
             {
@@ -60,7 +60,7 @@ namespace SQLServerUI
 
             sql.CreateContact(user);
         }
-        private static void ReadAllContacts(ISqlCrud sql)
+        private static void ReadAllContacts(SqlCrud sql)
         {
             var contacts = sql.GetAllContacts();
 
@@ -70,24 +70,14 @@ namespace SQLServerUI
             }
         }
 
-        private static void ReadContact(ISqlCrud sql, int contactId)
+        private static void ReadContact(SqlCrud sql, int contactId)
         {
             var contact = sql.GetFullContactById(contactId);
 
             Console.WriteLine($"{contact.Info.Id}: {contact.Info.FirstName} {contact.Info.LastName}");
-
-            foreach (var phone in contact.PhoneNumbers)
-            {
-                Console.WriteLine($"PhoneNumber: {phone.PhoneNumber}");
-            }
-
-            foreach (var email in contact.EmailAddresses)
-            {
-                Console.WriteLine($"Email Address: {email.EmailAddress}");
-            }
         }
 
-        private static void UpdateContact(ISqlCrud sql)
+        private static void UpdateContact(SqlCrud sql)
         {
             ContactModel contact = new ContactModel
             {
@@ -97,7 +87,7 @@ namespace SQLServerUI
             };
             sql.UpdateContactName(contact);
         }
-        private static void RemovePhoneNumberFromContact(ISqlCrud sql, int contactId, int phoneNumberId)
+        private static void RemovePhoneNumberFromContact(SqlCrud sql, int contactId, int phoneNumberId)
         {
             sql.RemovePhoneNumberFromContact(contactId, phoneNumberId);
         }
